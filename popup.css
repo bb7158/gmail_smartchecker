@@ -1,0 +1,62 @@
+/* Only apply styles inside the extension popup */
+.popup-container {
+    font-family: Arial, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.popup-container h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.popup-container p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.popup-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: transform 0.1s ease-in-out, background 0.3s;
+}
+
+/* Button hover */
+.popup-container button:hover {
+    background: #0056b3;
+}
+
+/* Button click animation */
+.popup-container button:active {
+    transform: scale(0.95);
+}
+
+/* Dark mode */
+.dark-mode {
+    background: #222;
+    color: #fff;
+}
+
+.dark-mode button {
+    background: #444;
+    color: white;
+}
+
+.dark-mode button:hover {
+    background: #555;
+}

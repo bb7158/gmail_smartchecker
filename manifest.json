@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Attachment & Spell Checker",
+  "version": "1.1",
+  "description": "Checks spelling, grammar, and attachments before sending emails.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://mail.google.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["popup.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "privacy_policy.html",
+    "open_in_tab": true
+  }
+}
